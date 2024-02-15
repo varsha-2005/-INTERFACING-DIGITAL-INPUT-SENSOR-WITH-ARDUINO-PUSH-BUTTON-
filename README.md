@@ -1,8 +1,8 @@
 ## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+## DATE : 15.02.2005
+## NAME : VARSHA.G																			             
+## ROLLNUMBER : 212222230166
+## DEPARTMENT : AI-DS
 
 
 ## AIM:
@@ -65,7 +65,31 @@ FIGURE -03
  
  
 
+int led=4;
+int pushbutton=3;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode (pushbutton,INPUT);
+}
 
+void loop()
+{
+  int pb;
+  pb=digitalRead(pushbutton);
+  if(pb==HIGH)
+	{
+  		digitalWrite(led, HIGH);
+  		delay(500); 
+  		digitalWrite(led, LOW);
+  		delay(500);
+	}
+	else
+	{
+  		delay(500);
+  		digitalWrite(led, LOW);
+	}
+}
 
 
 
@@ -81,5 +105,12 @@ FIGURE -03
 
 ## OUTPUT OF SIMULATION :
 
-[My image](username.github.com/repository/img/image.jpg)
+![Screenshot 2024-02-15 105854](https://github.com/varsha-2005/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/119288183/43dff7e0-43c3-4409-9d0d-56941c34b69c)
+![Screenshot 2024-02-15 105854](https://github.com/varsha-2005/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/119288183/bcb34493-8e9d-431c-90cc-301c71afcbef)
+
+## RESULT : 
+
+Hence We got the output To interface a digital input (push button) and blink and LED upon activation.
+
+
 
